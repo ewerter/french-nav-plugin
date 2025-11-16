@@ -101,7 +101,8 @@ class French_Header_Switcher {
             /* Logo - Left side */
             .french-header-custom .wp-block-site-logo {
                 flex-shrink: 0;
-                margin-right: 15px; /* Close to text */
+                position: absolute;
+                left: 15px;
                 display: flex;
                 align-items: center;
             }
@@ -119,11 +120,10 @@ class French_Header_Switcher {
                 font-size: 18px;
                 font-weight: 500;
                 margin: 0;
-                position: relative;
-                left: auto;
+                position: absolute;
+                left: 150px;
                 white-space: nowrap;
                 flex-grow: 1;
-                padding-right: auto;
             }
 
             /* Button - Far right, 20px from edge */
@@ -138,8 +138,9 @@ class French_Header_Switcher {
                 font-size: 16px;
                 transition: all 0.3s ease;
                 margin-left: auto;
-                margin-right: 20px; /* 20px from right edge */
                 flex-shrink: 0;
+                position: absolute;
+                right: 15px;
             }
 
             .french-header-custom .header-lang-button:hover {
@@ -162,23 +163,19 @@ class French_Header_Switcher {
                 }
                 
                 .french-header-custom .header-text {
-                    position: static;
-                    margin: 10px 0;
-                    white-space: normal;
-                    left: auto;
-                    flex-grow: 1;
+                    display: none;
                 }
                 
                 .french-header-custom .wp-block-site-logo {
                     margin-right: 0;
                     margin-bottom: 10px;
+                    top: 60px;
                 }
                 
                 .french-header-custom .header-lang-button {
                     margin-left: 0;
                     margin-right: 0;
-                    margin-top: 10px;
-                    width: 100%;
+                    top: 60px
                 }
             }
         </style>
@@ -211,11 +208,11 @@ class French_Header_Switcher {
                     </div>
                     
                     <!-- Center Text -->
-                    <p class="header-text">Support Long Term Care Workers</p>
+                    <p class="header-text">Soutenir les travailleurs des soins de longue durée</p>
                     
                     <!-- Language Button -->
                     <button class="header-lang-button">
-                        <a href="<?php echo esc_url($english_url); ?>">English</a>
+                        <a href="<?php echo esc_url($english_url); ?>">Anglais</a>
                     </button>
                     
                 </div>
