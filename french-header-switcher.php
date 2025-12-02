@@ -85,7 +85,7 @@ class French_Header_Switcher {
             /* French Header Styling */
             .french-header-custom {
                 width: 100%;
-                background-color: #d02478;
+                background-color: #c50a71;
                 margin: 0;
                 padding: 0;
             }
@@ -94,7 +94,7 @@ class French_Header_Switcher {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                padding: 15px 20px;
+                padding: 32px 20px;
                 max-width: 100%;
             }
 
@@ -129,24 +129,26 @@ class French_Header_Switcher {
             /* Button - Far right, 20px from edge */
             .french-header-custom .header-lang-button {
                 background-color: white;
-                color: #d02478;
+                color: #c50a71;
                 border: none;
                 padding: 10px 30px;
                 border-radius: 25px;
                 cursor: pointer;
-                font-weight: 600;
-                font-size: 16px;
+                font-weight: inherit;
+                font-size: inherit;
                 transition: all 0.3s ease;
                 margin-left: auto;
                 flex-shrink: 0;
                 position: absolute;
                 right: 15px;
+                font-family: inherit;
             }
 
             .french-header-custom .header-lang-button:hover {
-                background-color: #f0f0f0;
-                transform: translateY(-2px);
-                box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+                background-color: #F1BDD6;
+                color: #ffffff;
+                /*transform: translateY(-2px);
+                box-shadow: 0 2px 8px rgba(0,0,0,0.2);*/
             }
 
             .french-header-custom .header-lang-button a {
@@ -169,13 +171,13 @@ class French_Header_Switcher {
                 .french-header-custom .wp-block-site-logo {
                     margin-right: 0;
                     margin-bottom: 10px;
-                    top: 60px;
+                    top: 10px;
                 }
                 
                 .french-header-custom .header-lang-button {
                     margin-left: 0;
                     margin-right: 0;
-                    top: 60px
+                    top: 10px
                 }
             }
         </style>
@@ -187,8 +189,8 @@ class French_Header_Switcher {
      * Inject French header HTML directly into body
      */
     public function inject_french_header_html() {
-        $logo_url = 'https://mib.mzk.mybluehost.me/wp-content/uploads/2025/11/SCFP_pms227W.png';
-        $english_url = home_url('/?lang=en');
+        $logo_url = wp_upload_dir()['baseurl'] . '/2025/11/CUPE-NS-White-Logo_Version-2-2.png';
+        $english_url = site_url('/');
         
         ?>
         <header class="french-header-custom wp-block-template-part">
